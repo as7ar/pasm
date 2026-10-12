@@ -1,0 +1,11 @@
+[package]
+name = "pasm"
+description = "Rust API for writing PaperMC plugins that run as WASM modules inside the PASM host"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+pasm-macros = { workspace = true }

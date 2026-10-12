@@ -1,0 +1,8 @@
+name: Pasm
+version: '${version}'
+main: kr.astar.pasm.PasmHost
+api-version: '26.1'
+authors: [AS7AR]
+description: Runs Rust/WASM plugins on PaperMC
+libraries:
+  - com.dylibso.chicory:runtime:1.7.5

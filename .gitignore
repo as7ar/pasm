@@ -1,0 +1,12 @@
+/target
+**/target
+**/*.rs.bk
+.gradle/
+build/
+!pasm-host/src/**/build/
+**/.idea/
+**/*.iml
+.vscode/
+**/run/
+**/out/
+**/*.wasm
