@@ -9,4 +9,6 @@ build/
 .vscode/
 **/run/
 **/out/
+**/bin/
+**/*.class
 **/*.wasm

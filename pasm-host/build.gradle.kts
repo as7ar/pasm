@@ -1,5 +1,6 @@
 plugins {
     java
+    id("com.gradleup.shadow") version "9.3.0"
 }
 
 group = "kr.astar"
@@ -14,15 +15,8 @@ repositories {
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:$paperApiVersion")
+    compileOnly("io.papermc.paper:paper-api:$paperApiVersion"
     compileOnly("com.dylibso.chicory:runtime:$chicoryVersion")
-    compileOnly("com.google.code.gson:gson:2.11.0")
-
-    testImplementation("io.papermc.paper:paper-api:$paperApiVersion")
-    testImplementation("com.dylibso.chicory:runtime:$chicoryVersion")
-    testImplementation(platform("org.junit:junit-bom:5.11.4"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
 java {
@@ -42,9 +36,4 @@ tasks.processResources {
     filesMatching("plugin.yml") {
         expand(props)
     }
-}
-
-tasks.test {
-    useJUnitPlatform()
-    systemProperty("pasm.testWasm", providers.gradleProperty("pasmTestWasm").getOrElse(""))
 }
